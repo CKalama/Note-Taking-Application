@@ -7,6 +7,10 @@ module.exports = function(app) {
         res.json(dbData);
     })
 
+    app.post("/api/notes", (req,res) => {
+        
+    })
+
 
 
 
