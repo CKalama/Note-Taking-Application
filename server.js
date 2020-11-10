@@ -1,4 +1,5 @@
 const express = require("express");
+var path = require("path");
 
 
 //Attaching app to express for routing. 
@@ -12,8 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Exporting Routes, these provide a user with where the browser will "route" to when clicking an element on the browser
-require("./routes/apiRoutes")(app);
+//require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+
 
 app.listen(PORT, function() {
     console.log("Server fired up at localhost:" + PORT);
