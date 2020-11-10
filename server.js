@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-//Setting up Routes, these provide a user with where the browser will "route" to when clicking an element on the browser
+//Exporting Routes, these provide a user with where the browser will "route" to when clicking an element on the browser
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
