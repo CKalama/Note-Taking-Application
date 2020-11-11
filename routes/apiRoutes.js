@@ -10,18 +10,18 @@ module.exports = function(app) {
 
    app.post("/api/notes", (req,res) => {
         var newNote = req.body;
-        console.log(newNote);
+        //console.log(newNote);
 
         fs.readFile("./db/db.json", "UTF-8", function(err, data) {
             if (err) {
                 console.log(err)
             } 
-                console.log(data)
+                //console.log(data)
             //Converting into an array
             data = JSON.parse(data);
             //Pushing req.body into new data parameter
             data.push(newNote);
-            console.log(data);
+            //console.log(data);
          fs.writeFile("./db/db.json", JSON.stringify(data), function(err) {
              if(err) {
                  console.log(err)
