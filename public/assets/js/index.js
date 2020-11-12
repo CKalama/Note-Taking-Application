@@ -29,6 +29,7 @@ const deleteNote = (id) => {
   return $.ajax({
     url: "api/notes/" + id,
     method: "DELETE",
+    // success: function(data)
   });
 };
 

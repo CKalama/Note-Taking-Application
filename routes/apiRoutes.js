@@ -41,6 +41,8 @@ module.exports = function(app) {
 
     app.delete("/api/notes/:id", (req, res) => {
         console.log("Deleted!!!!");
+        var deletedNote = req.params.id;
+
         res.render("index", req.params.id);
     })
 }
