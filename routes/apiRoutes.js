@@ -5,13 +5,14 @@ var fs = require("fs");
 
 module.exports = function(app) {
     app.get("/api/notes", (req,res) => {
-        res.json(dbData);
-        JSON.stringify(dbData);
-        // var displayNote = req.body.title;
-        // if (displayNote === true) {
-            
-        // }
-        
+       fs.readFile('./db/db.json', 'UTF-8', (err, data)=> {
+           if(err) {
+            console.log("ERROR");
+           } else {
+               console.log(data);
+               res.json(JSON.parse(data))
+           }  
+       })     
     })
 
    app.post("/api/notes", (req,res) => {
@@ -40,9 +41,16 @@ module.exports = function(app) {
     })
 
     app.delete("/api/notes/:id", (req, res) => {
-        console.log("Deleted!!!!");
-        var deletedNote = req.params.id;
+        //console.log("Deleted!!!!");
+        fs.readFile('./db/db.json', (err, data) => {
+            console.log("DELETED ID : ", req.params);
+            var deleteData = JSON.parse(data)
 
-        res.render("index", req.params.id);
+            //Need an array
+            var newData = [];
+        })
+        
+
+        
     })
 }
