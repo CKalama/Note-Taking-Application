@@ -2,7 +2,7 @@
 
 This is a Functional Team Template Generator for a team consiting of a Manager, Engineer, and Intern.
 
-Deployed Herokue Link: 
+Deployed Heroku Link: https://secret-meadow-51894.herokuapp.com/ 
 
 Programming Tools: The Front-End was provided through the Bootcamp using HTML,CSS, and Javascript. The Back-End was built using Node.js, one npm package: Express. Express is primarily used in this Application for Routing purposes. 
 
