@@ -1,6 +1,6 @@
 # Note-Taking-Application
 
-This is a Functional Team Template Generator for a team consiting of a Manager, Engineer, and Intern.
+This is a functional Note Taking Application. 
 
 Deployed Heroku Link: https://secret-meadow-51894.herokuapp.com/ 
 
