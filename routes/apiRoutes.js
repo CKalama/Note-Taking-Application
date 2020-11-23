@@ -48,6 +48,16 @@ module.exports = function(app) {
 
             //Need an array
             var newData = [];
+
+            //Loop to fill array (like map in React)
+            for (let i =0; i <deleteData.length; i++) {
+
+                if(parseInt(req.params.id) !==deleteData[i].id) {
+                    newData.push(deleteData[i])
+                }
+            }
+
+            console.log("here is the new array", deleteData);
         })
         
 
