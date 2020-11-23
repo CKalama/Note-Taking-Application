@@ -57,8 +57,12 @@ module.exports = function(app) {
                 }
             }
 
-            console.log("here is the new array", deleteData);
+            //console.log("here is the new array", deleteData);
             
+            fs.writeFile("./db/db.json", JSON.stringify(newData), function(err){
+                console.log(err);
+                res.json(newData);
+            })
         })
         
 
