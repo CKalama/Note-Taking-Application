@@ -58,7 +58,7 @@ module.exports = function(app) {
             }
 
             console.log("here is the new array", deleteData);
-            console.log("test");
+            
         })
         
 
